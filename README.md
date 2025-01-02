@@ -12,7 +12,7 @@ Ever tried teaching someone to code? You know how tricky it gets when the task i
 - **Correctness**: Making sure the solution works perfectly every time.
 - **Scalability**: Adapting to all kinds of problems, from beginner-level tasks to high-stakes competitive programming.
 
-FUNCODER swoops in like a superhero, solving these issues with two magical tools: **Divide-and-Conquer** and **Consensus**. Let’s dive in!
+Existing methods, such as standard prompting or self-testing, often fall short. Errors in sub-functions propagate, making the overall solution unreliable. FUNCODER swoops in like a superhero, solving these issues with two magical tools: **Divide-and-Conquer** and **Consensus**. Let’s dive in!
 
 ---
 
@@ -23,37 +23,68 @@ FUNCODER doesn’t just churn out code—it thinks like a skilled programmer. He
 ### 1. **Divide-and-Conquer Strategy**
 This is FUNCODER’s bread and butter. It takes a complex problem and chops it into smaller sub-problems, solves them one at a time, and finally stitches everything together. Think of it like assembling Lego bricks.
 
-#### Example: Sum of Common Factors
-Let’s say you want to find the sum of common factors of two numbers. Sounds simple, right? Here’s how FUNCODER would break it down:
+#### How It Works
 
-```python
-# Root function
-def sum_common_factors(a, b):
-    fa = find_factors(a)
-    fb = find_factors(b)
-    return sum_common(fa, fb)
+1. **Divide**: FUNCODER starts by analyzing the main problem and identifying smaller sub-goals that can be implemented as individual functions. These sub-functions are like building blocks that solve specific parts of the problem.
 
-# Sub-functions
-def find_factors(x):
-    return [i for i in range(1, x+1) if x % i == 0]
+   **Example**: Suppose you need to calculate the sum of common factors of two numbers.
 
-def sum_common(fa, fb):
-    return sum(set(fa) & set(fb))
-```
-First, it creates two helper functions: `find_factors` and `sum_common`. Then, it combines them in the root function `sum_common_factors`. Step by step, FUNCODER builds the solution like a pro.
+   ```python
+   def sum_common_factors(a, b):
+       fa = find_factors(a)
+       fb = find_factors(b)
+       return sum_common(fa, fb)
+   ```
+
+   Here, `find_factors` and `sum_common` are the sub-functions. FUNCODER breaks the task into these smaller pieces, making it easier to solve step by step.
+
+2. **Conquer**: Each sub-function is independently implemented and validated. FUNCODER ensures correctness at every step by solving and testing these smaller tasks first.
+
+   ```python
+   def find_factors(x):
+       return [i for i in range(1, x+1) if x % i == 0]
+
+   def sum_common(fa, fb):
+       return sum(set(fa) & set(fb))
+   ```
+
+   Once all sub-functions are implemented, FUNCODER combines them to create the final solution.
+
+3. **Hierarchical Structure**: FUNCODER organizes these functions into a **dependency tree**. The root node represents the main function, while the child nodes represent sub-functions. FUNCODER solves leaf nodes (the simplest sub-functions) first and builds upward.
+
+   **Illustration**: For `sum_common_factors(a, b)`, the tree looks like this:
+   ```
+   Root: sum_common_factors
+        ├── find_factors(a)
+        ├── find_factors(b)
+        └── sum_common
+   ```
+   This structured approach ensures that every part of the solution is verified before integration.
 
 ---
 
 ### 2. **Functional Consensus Mechanism**
-Here’s the twist. Instead of trusting one solution, FUNCODER generates multiple versions of each function and lets them compete. The winner? The one that behaves the most consistently.
+Now, let’s talk about FUNCODER’s secret weapon: **Consensus**. When FUNCODER generates a sub-function, it doesn’t rely on just one implementation. Instead, it creates multiple versions and lets them compete.
 
-#### Example: Picking the Best `find_factors`
-Imagine you have three versions of the `find_factors` function:
-- **Candidate 1**: `[1, 2, 4, 8]`
-- **Candidate 2**: `[1, 2, 4]`
-- **Candidate 3**: `[1, 2, 4, 8]`
+#### How Consensus Works
 
-FUNCODER tests them on multiple inputs and sees which one agrees with others the most. It’s like a coding democracy—only the most reliable version wins!
+1. **Generating Candidates**: FUNCODER generates multiple candidate implementations for each sub-function. For example, `find_factors(x)` might have:
+   - Candidate 1: Returns `[1, 2, 4, 8]` for input `8`.
+   - Candidate 2: Returns `[1, 2, 4]` for input `8`.
+   - Candidate 3: Returns `[1, 2, 4, 8]` for input `8`.
+
+2. **Behavioral Similarity**: FUNCODER tests these implementations on multiple inputs and compares their outputs. The similarity between two candidates is calculated as the proportion of test cases where their outputs match.
+
+   **Example**: If Candidates 1 and 3 produce identical outputs for most test cases, FUNCODER identifies them as more reliable than Candidate 2.
+
+3. **Selecting the Best**: The candidate with the highest agreement (functional consensus) is chosen as the final implementation. This ensures robustness, even if some initial implementations are flawed.
+
+   **Equation**:
+   ```
+   f* = argmax_f (Σ similarity(f, g) for all g ≠ f)
+   ```
+
+   FUNCODER essentially acts like a panel of judges, picking the most trustworthy solution.
 
 ---
 
@@ -81,7 +112,7 @@ Think about the possibilities:
 - **Research**: Tackle tough algorithmic problems with ease, thanks to FUNCODER’s structured approach.
 
 ### What Makes FUNCODER Special
-- **Accuracy**: By selecting the most reliable solutions, it reduces errors dramatically.
+- **Accuracy**: By selecting the most reliable solutions, it dramatically reduces errors.
 - **Adaptability**: FUNCODER isn’t just for big models—it even boosts smaller models like StableCode3b.
 - **Scalability**: Whether you’re solving a simple math problem or a complex algorithm, FUNCODER has your back.
 
