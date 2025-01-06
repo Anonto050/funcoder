@@ -86,6 +86,10 @@ Now, let’s talk about FUNCODER’s secret weapon: **Consensus**. When FUNCODER
 
    FUNCODER essentially acts like a panel of judges, picking the most trustworthy solution.
 
+### 3. Efficiency and Generalizability
+- **Token-Cost Complexity**: FUNCODER achieves efficiency with a complexity of \(O(kN)\), where \(k\) is the number of sampled candidates, and \(N\) is the token length of the final program.
+- **Applicability**: FUNCODER adapts seamlessly to various scales, from large proprietary models to smaller community models like StableCode.
+
 ---
 
 ## FUNCODER in Action: The Results Are In
