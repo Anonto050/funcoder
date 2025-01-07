@@ -1,9 +1,8 @@
 # FUNCODER: How Divide-and-Conquer and Consensus Are Changing Code Generation Forever
 
-> *This blog is a review of the paper [**"Divide-and-Conquer Meets Consensus: Unleashing the Power of Functions in Code Generation"**](https://openreview.net/forum?id=cFqAANINgW), published at NeurIPS 2024. The blog is co-authored by [Riad Ahmed Anonto](https://github.com/Anonto050), [Faria Binta Awal](https://github.com/f12-mou), and [Md. Ishrak Ahsan](https://github.com/ishrak26), all undergraduate seniors at CSE, BUET. It explores the innovative methods and impacts of FUNCODER, a framework that combines divide-and-conquer strategies with functional consensus for robust code generation.*
+> *This blog is a review of the paper [**"Divide-and-Conquer Meets Consensus: Unleashing the Power of Functions in Code Generation"**](https://openreview.net/forum?id=cFqAANINgW), published at NeurIPS 2024. The blog is co-authored by [Riad Ahmed Anonto](https://github.com/Anonto050), [Faria Binta Awal](https://github.com/f12-mou), and [Md. Ishrak Ahsan](https://github.com/ishrak26), all undergraduate seniors at CSE, BUET.*
 
 Imagine you’re solving a complex jigsaw puzzle. What do you do? You break it down into smaller, manageable chunks, solve each piece, and then fit them together. Now, imagine doing this with code! That’s exactly what FUNCODER does—but with an extra twist of teamwork. Let me explain how this works and why it’s a game-changer for programming.
-
 
 ---
 
