@@ -96,16 +96,36 @@ Now, let’s talk about FUNCODER’s secret weapon: **Consensus**. When FUNCODER
 
 FUNCODER didn’t just stop at theory—it went head-to-head with other methods on popular benchmarks like HumanEval, MBPP, and xCodeEval. And guess what? It crushed them.
 
-| **Model**    | **Method**    | **HumanEval** | **MBPP** | **xCodeEval (All)** |
-|--------------|---------------|---------------|----------|--------------------|
-| GPT-3.5      | Standard      | 68.3          | 72.0     | 20.2              |
-|              | FUNCODER      | 85.4 (+17.1%) | 78.5     | 31.4              |
-| GPT-4        | Standard      | 82.9          | 73.5     | 37.4              |
-|              | FUNCODER      | 94.5 (+11.6%) | 79.5     | 48.6              |
+| GPT-3.5 vs Funcoder            | GPT-4 vs Funcoder              |
+| ------------------------------ | ------------------------------ |
+| ![Image 1](images/image_1.jpg) | ![Image 2](images/image_2.jpg) |
+
 
 The improvement is even more dramatic for harder problems. FUNCODER’s divide-and-conquer approach shines in algorithm-heavy challenges, solving them with surgical precision.
 
 ---
+
+
+# Comparing Traditional LLM and FUNCoder
+This example demonstrates how FUNCoder dynamically handles division by zero in a multi-step arithmetic calculation pipeline, ensuring robustness, while a traditional LLM fails due to error propagation.
+We aim to implement a function `calculate(a, b, c, d)` that evaluates:
+Where:
+- `add(a, b)` computes the sum.
+- `subtract(a,b)` computes the subtraction.
+- `mul(a, b)` computes the product.
+- `divide(a, b)` computes the division.
+
+If `d = 0`, a division by zero occurs, causing the LLM-generated code to crash.
+
+## **Diagram**
+<img src="images/Frame_1.jpg" alt="Comparison of Traditional LLM and FUNCoder" width="800"/>
+
+The diagram illustrates:
+1. How traditional LLMs handle this scenario without error checks, leading to a crash.
+2. FUNCoder's consensus-based approach, dynamically selecting a robust division implementation to handle edge cases effectively. It fixes division by zero locally without breaking dependent functions.
+
+---
+
 
 ## Why FUNCODER Matters
 
