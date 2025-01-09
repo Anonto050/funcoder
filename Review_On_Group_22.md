@@ -1,6 +1,6 @@
 # Review of the Blog on MINIMO
 
-**This review is for the blog written [here](https://gist.github.com/anion-hawk/6ed0b0cc4709163e4f1bff8e856ef0b1).**
+> *This blog is a review of the blog [**"MINIMO: When AI Takes on Maths"**](https://gist.github.com/anion-hawk/6ed0b0cc4709163e4f1bff8e856ef0b1). This review blog is co-authored by [Faria Binta Awal](https://github.com/f12-mou), [Md. Ishrak Ahsan](https://github.com/ishrak26), and [Riad Ahmed Anonto](https://github.com/Anonto050), all undergraduate seniors at CSE, BUET.*
 
 ---
 
