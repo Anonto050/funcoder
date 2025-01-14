@@ -8,7 +8,7 @@ Imagine you’re solving a complex jigsaw puzzle. What do you do? You break it d
 
 ## The Problem: Why Code Generation Needs FUNCODER
 
-Ever tried teaching someone to code? You know how tricky it gets when the task involves multiple steps, logic, and precision. Machines face the same problem when generating code. Large language models (LLMs) like GPT-4 are powerful, but they struggle with:
+Ever tried teaching someone to code? You know how tricky it gets when the task involves multiple steps, logic, and precision. Machines face the same problem when generating code. Large language models (LLM) like GPT-4 are powerful, but they struggle with:
 
 - **Complexity**: Breaking a big task into smaller, solvable steps.
 - **Correctness**: Making sure the solution works perfectly every time.
